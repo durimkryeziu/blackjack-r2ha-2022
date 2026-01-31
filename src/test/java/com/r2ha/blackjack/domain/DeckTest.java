@@ -1,4 +1,4 @@
-package com.r2ha.blackjack;
+package com.r2ha.blackjack.domain;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.*;
 class DeckTest {
 
     @Test
-    public void fullDeckHas52Cards() throws Exception {
+    void fullDeckHas52Cards() {
         Deck deck = new Deck();
 
         assertThat(deck.size())
@@ -18,7 +18,7 @@ class DeckTest {
     }
 
     @Test
-    public void drawCardFromDeckReducesDeckSizeByOne() throws Exception {
+    void drawCardFromDeckReducesDeckSizeByOne() {
         Deck deck = new Deck();
 
         deck.draw();
@@ -28,7 +28,7 @@ class DeckTest {
     }
 
     @Test
-    public void drawCardFromDeckReturnsValidCard() throws Exception {
+    void drawCardFromDeckReturnsValidCard() {
         Deck deck = new Deck();
 
         Card card = deck.draw();
@@ -41,7 +41,7 @@ class DeckTest {
     }
 
     @Test
-    public void drawAllCardsResultsInSetOf52UniqueCards() throws Exception {
+    void drawAllCardsResultsInSetOf52UniqueCards() {
         Deck deck = new Deck();
 
         Set<Card> drawnCards = new HashSet<>();

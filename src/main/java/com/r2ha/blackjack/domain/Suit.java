@@ -1,4 +1,4 @@
-package com.r2ha.blackjack;
+package com.r2ha.blackjack.domain;
 
 public enum Suit {
     HEARTS("♥", true),
@@ -18,7 +18,7 @@ public enum Suit {
         return symbol;
     }
 
-    boolean isRed() {
+    public boolean isRed() {
         return isRed;
     }
 }
